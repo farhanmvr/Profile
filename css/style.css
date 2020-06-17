@@ -140,9 +140,6 @@ main #home-section .right-section img{
 /* Home section ends */
 
 /* About section starts */
-main #about-section{
-    
-}
 main #about-section .left-section .head{
     font-size: 1.3rem;
 }
@@ -156,6 +153,45 @@ main #about-section .key{
     font-weight: 600;
 }
 /* About section ends */
+
+/* Services section starts */
+main #services-section i{
+    font-size: 4rem;
+    color: #18d26e;
+}
+main #services-section .item-card{
+    background: rgba(255, 255, 255, .12);
+    text-align: center;
+    width: 100%;
+    border: .2rem solid transparent;
+    transition: all .3s;
+}
+main #services-section .item-card:hover{
+    border-color: #18d26e;
+}
+main #services-section .item-card h4{
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 1.2rem;
+    position: relative;
+    padding-bottom: 1rem;
+}
+main #services-section .item-card h4::after{
+    display: block;
+    content: '';
+    width: 20%;
+    height: .12rem;
+    background: #18d26e;
+    position: absolute;
+    bottom: 0;
+    left: 40%;
+    transform: scaleX(0);
+    transition: all .5s;
+}
+main #services-section .item-card:hover h4::after{
+    transform: scaleX(1);
+}
+/* Services section ends */
 
 /* Skills section starts */
 main #skills-section .container{
