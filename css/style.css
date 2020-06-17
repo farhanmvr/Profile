@@ -139,6 +139,24 @@ main #home-section .right-section img{
 }
 /* Home section ends */
 
+/* About section starts */
+main #about-section{
+    
+}
+main #about-section .left-section .head{
+    font-size: 1.3rem;
+}
+main #about-section table .icon i,main #about-section .language i{
+    color: #18d26e;
+}
+main #about-section tr{
+    height: 2.5rem;
+}
+main #about-section .key{
+    font-weight: 600;
+}
+/* About section ends */
+
 /* Skills section starts */
 main #skills-section .container{
     padding-top: 3rem;
