@@ -3,6 +3,7 @@ body{
     color: #ffffff;
     background: #000000;
 }
+textarea, select, input, button { outline: none; }
 .section-header h2{
     font-weight: 700;
     font-size: 2rem;
@@ -142,6 +143,7 @@ main #home-section .right-section img{
 /* About section starts */
 main #about-section .left-section .head{
     font-size: 1.3rem;
+    color: #999999;
 }
 main #about-section table .icon i,main #about-section .language i{
     color: #18d26e;
@@ -151,6 +153,9 @@ main #about-section tr{
 }
 main #about-section .key{
     font-weight: 600;
+}
+main #about-section .value{
+    color: #999999;
 }
 /* About section ends */
 
@@ -206,7 +211,165 @@ main #skills-section .progress{
     border-radius: 0;
     height: .5rem;
 }
-
 /* Skills section ends */
+
+/* Contact section starts */
+main #contact-section .card{
+    background: transparent;
+}
+main #contact-section .row .circle{
+    background: rgba(255, 255, 255, .12);
+    border-radius: 50%;
+    width: 6rem;
+    height: 6rem;
+}
+main #contact-section .row .circle i{
+    font-size: 1.7rem;
+    color: #18d26e;
+}
+main #contact-section .card .card-title{
+    text-transform: uppercase;
+    font-weight: 700;
+    text-align: center;
+}
+main #contact-section .card .card-text{
+    text-align: center;
+    color: #999999;
+    font-size: .8rem;
+}
+main #contact-section .card .card-text.info{
+    font-size: 1rem;
+}
+
+main #contact-section .form-section{
+    border: 1px solid #18d26e;
+    padding: 3.2rem 0;
+}
+main #contact-section .form-section .right-section{
+    padding: 1rem 5rem 1rem 1rem;
+}
+main #contact-section .form-section .right-section .header{
+    font-size: 1.5rem;
+}
+main #contact-section .form-section .right-section .header i{
+    color: #18d26e;
+}
+main #contact-section textarea{
+    width: 100%;
+    padding: 1rem;
+    background: transparent;
+    resize: none;
+    color: #ffffff;
+}
+main #contact-section textarea:focus{
+    border: 1px solid #18d26e;
+}
+main #contact-section .send-btn{
+    color: #ffffff;
+    border: 1px solid #999999;
+    width: 100%;
+    border-radius: 0px;
+    padding: .5rem 3rem;
+    margin-top: 1.2rem;
+}
+main #contact-section .send-btn:hover{
+    border-color: #18d26e;
+    color: #18d26e;
+}
+/* form starting stylings ------------------------------- */
+.group 			  { 
+  position:relative; 
+  margin-bottom:1.5rem; 
+}
+input 				{
+  font-size:18px;
+  padding:10px 10px 3px 5px;
+  display:block;
+  width:100%;
+  border:none;
+  border-bottom:1px solid #757575;
+  background: transparent;
+  color: #ffffff;
+}
+input:focus 		{ outline:none; }
+
+/* LABEL ======================================= */
+label 				 {
+  color:#999; 
+  font-size:1rem;
+  font-weight:normal;
+  position:absolute;
+  pointer-events:none;
+  left:.2rem;
+  bottom:.2rem;
+  transition:0.2s ease all; 
+  -moz-transition:0.2s ease all; 
+  -webkit-transition:0.2s ease all;
+}
+
+/* active state */
+input:focus ~ label, input:valid ~ label 		{
+  top:-.6rem;
+  font-size:14px;
+  color:#18d26e;
+}
+
+/* BOTTOM BARS ================================= */
+.bar 	{ position:relative; display:block; width:100%; }
+.bar:before, .bar:after 	{
+  content:'';
+  height:2px; 
+  width:0;
+  bottom:1px; 
+  position:absolute;
+  background:#18d26e; 
+  transition:0.2s ease all; 
+  -moz-transition:0.2s ease all; 
+  -webkit-transition:0.2s ease all;
+}
+.bar:before {
+  left:50%;
+}
+.bar:after {
+  right:50%; 
+}
+
+/* active state */
+input:focus ~ .bar:before, input:focus ~ .bar:after {
+  width:50%;
+}
+
+/* HIGHLIGHTER ================================== */
+.highlight {
+  position:absolute;
+  height:60%; 
+  width:100px; 
+  top:25%; 
+  left:0;
+  pointer-events:none;
+  opacity:0.5;
+}
+
+/* active state */
+input:focus ~ .highlight {
+  -webkit-animation:inputHighlighter 0.3s ease;
+  -moz-animation:inputHighlighter 0.3s ease;
+  animation:inputHighlighter 0.3s ease;
+}
+
+/* ANIMATIONS ================ */
+@-webkit-keyframes inputHighlighter {
+	from { background:#18d26e; }
+  to 	{ width:0; background:transparent; }
+}
+@-moz-keyframes inputHighlighter {
+	from { background:#18d26e; }
+  to 	{ width:0; background:transparent; }
+}
+@keyframes inputHighlighter {
+	from { background:#18d26e; }
+  to 	{ width:0; background:transparent; }
+}
+/* Contact section ends */
 
 /* Main section ends */
