@@ -373,3 +373,23 @@ input:focus ~ .highlight {
 /* Contact section ends */
 
 /* Main section ends */
+
+/* Footer section starts */
+footer{
+    padding: 10rem 0;
+    height: 1000px;
+}
+footer .header{
+    font-weight: 700;
+}
+footer .about{
+    font-size: 1rem;
+    color: #999999;
+}
+footer p{
+    color: #999999;
+}
+footer i{
+    color: #18d26e;
+}
+/* Footer section ends */
