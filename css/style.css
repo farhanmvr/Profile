@@ -4,6 +4,9 @@ body{
     background: #000000;
 }
 textarea, select, input, button { outline: none; }
+button:focus{
+    outline: none;
+}
 .section-header h2{
     font-weight: 700;
     font-size: 2rem;
@@ -88,7 +91,8 @@ nav .navbar-nav .nav-item a:hover::after{
 
 /* Home section starts */
 main #home-section{
-    height: 85vh;
+    height: 800px;
+    overflow: hidden;
 }
 main #home-section .left-section{
     padding-top: 23%;
@@ -138,6 +142,11 @@ main #home-section .right-section img{
         font-size: 1rem;
     }
 }
+@media only screen and (max-width: 500px) {
+    main #home-section .right-section img{
+        height: 15rem;
+    }
+}
 /* Home section ends */
 
 /* About section starts */
@@ -156,6 +165,22 @@ main #about-section .key{
 }
 main #about-section .value{
     color: #999999;
+}
+@media only screen and (max-width: 421px) {
+    main #about-section .value{
+        margin-left: .2rem;
+    }
+    main #about-section .key,main #about-section .value{
+        font-size: .8rem;
+    }
+}
+@media only screen and (min-width:421px) and (max-width: 450px) {
+    main #about-section .value{
+        margin-left: .2rem;
+    }
+    main #about-section .key,main #about-section .value{
+        font-size: .9rem;
+    }
 }
 /* About section ends */
 
@@ -276,14 +301,19 @@ main #contact-section .send-btn:hover{
     border-color: #18d26e;
     color: #18d26e;
 }
-/* form starting stylings ------------------------------- */
+@media only screen and (max-width: 991px){
+    main #contact-section .form-section .right-section{
+        padding: 2rem;
+    }
+}
+  /* form starting stylings ------------------------------- */
 .group 			  { 
   position:relative; 
   margin-bottom:1.5rem; 
 }
 input 				{
   font-size:18px;
-  padding:10px 10px 3px 5px;
+  padding:10px 2px 3px 2px;
   display:block;
   width:100%;
   border:none;
@@ -293,7 +323,7 @@ input 				{
 }
 input:focus 		{ outline:none; }
 
-/* LABEL ======================================= */
+  /* LABEL ======================================= */
 label 				 {
   color:#999; 
   font-size:1rem;
@@ -307,14 +337,14 @@ label 				 {
   -webkit-transition:0.2s ease all;
 }
 
-/* active state */
+  /* active state */
 input:focus ~ label, input:valid ~ label 		{
   top:-.6rem;
   font-size:14px;
   color:#18d26e;
 }
 
-/* BOTTOM BARS ================================= */
+  /* BOTTOM BARS ================================= */
 .bar 	{ position:relative; display:block; width:100%; }
 .bar:before, .bar:after 	{
   content:'';
@@ -334,12 +364,12 @@ input:focus ~ label, input:valid ~ label 		{
   right:50%; 
 }
 
-/* active state */
+  /* active state */
 input:focus ~ .bar:before, input:focus ~ .bar:after {
   width:50%;
 }
 
-/* HIGHLIGHTER ================================== */
+  /* HIGHLIGHTER ================================== */
 .highlight {
   position:absolute;
   height:60%; 
@@ -350,14 +380,14 @@ input:focus ~ .bar:before, input:focus ~ .bar:after {
   opacity:0.5;
 }
 
-/* active state */
+  /* active state */
 input:focus ~ .highlight {
   -webkit-animation:inputHighlighter 0.3s ease;
   -moz-animation:inputHighlighter 0.3s ease;
   animation:inputHighlighter 0.3s ease;
 }
 
-/* ANIMATIONS ================ */
+  /* ANIMATIONS ================ */
 @-webkit-keyframes inputHighlighter {
 	from { background:#18d26e; }
   to 	{ width:0; background:transparent; }
@@ -390,6 +420,30 @@ footer p{
     color: #999999;
 }
 footer i{
+    color: #18d26e;
+}
+footer ul {
+    list-style: none;
+    justify-content: center;
+}
+footer ul li {
+    display: inline-block;
+    background-color: rgba(255, 255, 255, .12);
+    margin: 1rem;
+    border-radius: 50%;
+}
+footer ul li a {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    text-decoration: none;
+    height: 3rem;
+    width: 3rem;
+}
+footer ul li a i{
+    color: rgba(255, 255, 255, .6);
+}
+footer ul li a:hover i{
     color: #18d26e;
 }
 /* Footer section ends */
