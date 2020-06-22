@@ -443,7 +443,7 @@ footer ul li a {
 footer ul li a i{
     color: rgba(255, 255, 255, .6);
 }
-footer ul li a:hover i{
+footer .social-icons ul li a:hover i{
     color: #18d26e;
 }
 /* Footer section ends */
