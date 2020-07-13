@@ -92,7 +92,7 @@ main #home-section {
   overflow: hidden;
 }
 main #home-section .left-section {
-  padding-top: 23%;
+  padding-top: 30vh;
 }
 main #home-section .left-section h1 {
   padding: 0;
@@ -464,7 +464,6 @@ footer {
   background: rgb(12, 12, 11);
   margin-top: 10rem;
   padding: 6.5rem 0;
-  height: 1100px;
 }
 footer .header {
   font-weight: 700;
@@ -502,5 +501,20 @@ footer ul li a i {
 }
 footer .social-icons ul li a:hover i {
   color: #18d26e;
+}
+
+@media only screen and (min-width: 577px) {
+  footer {
+    height: 1100px;
+  }
+}
+@media only screen and (max-width: 450px) {
+  footer ul li {
+    margin: .3rem;
+  }
+  footer ul li a{
+    height: 2rem;
+    width: 2rem;
+  }
 }
 /* Footer section ends */
