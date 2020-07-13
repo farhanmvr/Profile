@@ -1,3 +1,5 @@
+var isFirst = true;
+
 $(document).ready(function () {
   $(document).on('scroll', onScroll);
 
@@ -43,3 +45,17 @@ function onScroll(event) {
     }
   });
 }
+
+$(function () {
+  $(document).scroll(function () {
+    var $nav = $('#main-navbar');
+    $nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
+    var $scroll_indicator = $('#scroll-indicator');
+    if ($(this).scrollTop() > $nav.height() && isFirst) {
+      // $('.scroll-animation').css('display', 'none');
+      // $('.scroll-animation').animate({opacity:'0'});
+      $('#scroll-indicator').fadeOut(300);
+      isFirst = false;
+    }
+  });
+});
