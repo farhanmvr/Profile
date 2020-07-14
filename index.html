@@ -48,14 +48,14 @@
 <body onload="loadFunction()">
     <!-- Loading indicator starts -->
     <div id="loading">
-        <div class="wrapper">
+        <div class="wrapper d-flex justify-content-center">
             <div class="circle"></div>
             <div class="circle"></div>
             <div class="circle"></div>
             <div class="shadow"></div>
             <div class="shadow"></div>
             <div class="shadow"></div>
-            <span>Loading</span>
+            <span>Loading...</span>
         </div>
     </div>
     <!-- Loading indicator ends -->
@@ -114,8 +114,10 @@
                     <div class="col-md-6 left-section">
                         <h1>I'm</h1>
                         <h1 class="name">Mohammed Farhan</h1>
-                        <h3>Android App Developer | Full Stack Web Developer</h3>
-                        <div class="buttons">
+                        <div class="service mt-3">
+                            <h2>I'm a <span class="typed"></span></h2>
+                        </div>
+                        <div class="buttons mt-4">
                             <div class="btn hire-me-btn">HIRE ME</div>
                             <div class="btn get-cv-btn">GET CV</div>
                         </div>
@@ -141,7 +143,12 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-6 left-section order-2 order-md-1 d-flex align-items-end">
-                        <div>
+                        <div class="image-container mt-5">
+                            <div class="image">
+                                <img src="https://nettv4u.com/imagine/21-01-2020/tovino-thomas.jpg" alt="profile-img" class="img-fluid d-block">
+                            </div>
+                        </div>
+                        <!-- <div>
                             <p class="head">Languages I'm dealing with includes</p>
                             <div data-aos="fade-right"><p class="language"><i class="fas fa-angle-right mr-3"></i>C</p></div>
                             <div data-aos="fade-right"><p class="language"><i class="fas fa-angle-right mr-3"></i>C++</p></div>
@@ -150,13 +157,13 @@
                             <div data-aos="fade-right"><p class="language"><i class="fas fa-angle-right mr-3"></i>Dart</p></div>
                             <div data-aos="fade-right"><p class="language"><i class="fas fa-angle-right mr-3"></i>JavaScript</p></div>
                             <div data-aos="fade-right"><p class="language"><i class="fas fa-angle-right mr-3"></i>NodeJs</p></div> 
-                        </div>
+                        </div> -->
                     </div>
                     <div class="col-md-6 order-1 order-md-2 right-section">
                         <div class="section-header d-flex">
-                            <h2>About Me</h2>
+                            <h2>About <span>Me</span></h2>
                         </div>
-                        <table class="mt-5 mb-3">
+                        <table class="mt-3 mb-3">
                             <tr>
                                 <td><span class="icon mr-2"><i class="far fa-user"></i></span><span class="key">Name
                                         :</span></td>
@@ -193,6 +200,9 @@
                                 <td><span class="ml-md-5 ml-sm-3 value">+91 9633710563</span></td>
                             </tr>
                         </table>
+                        <div class="btn-grp mt-5">
+                            <a class="btn"><i class="fas fa-download mr-2"></i>Download CV</a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -535,7 +545,7 @@
         crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-        crossorigin="anonymous"></script>
+        crossorigin="anonymous"></script>        
     <!-- Loading script -->
     <script>
         var loadingDiv = $('#loading');
@@ -544,6 +554,16 @@
             loadingDiv.css('display','none');
             navbar.css('display','block');
         }
+    </script>
+    <!-- Typed js -->
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
+    <script>
+        var typed = new Typed('.typed', {
+        strings: ['ANDROID DEVELOPER', 'WEB DEVELOPER'],
+        typeSpeed: 40,
+        backSpeed: 20,
+        loop: true
+  });
     </script>
     <!-- Particle scripts -->
     <script src="./js/particles.js"></script>
